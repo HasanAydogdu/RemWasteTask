@@ -1,14 +1,11 @@
 package com.saucedemo.pages;
 
 import com.saucedemo.utilities.BrowserUtils;
-import com.saucedemo.utilities.ConfigurationReader;
 import com.saucedemo.utilities.Driver;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
 
 public class LoginPage extends BasePage{
 
@@ -16,16 +13,27 @@ public class LoginPage extends BasePage{
 
     @FindBy(id="user-name")
     public  WebElement usernameSaucelab;
+
     @FindBy(id="password")
     public  WebElement passwordSaucelab;
+
     @FindBy(id="login-button")
     public  WebElement loginBtn;
 
-    @FindBy(xpath = "//input[@type='email']")
-    public WebElement username;
+    @FindBy(xpath = "//span[@class='title']")
+    public WebElement mainPageProduct;
 
-    @FindBy(css = ".ant-collapse-item")
-    public List<WebElement> practiceSelectList;
+    @FindBy(xpath = "//h3")
+    public WebElement loginError;
+
+    @FindBy(id="react-burger-menu-btn")
+    public WebElement menuButton;
+
+    @FindBy(id="logout_sidebar_link")
+    public WebElement sideLogOut;
+
+
+
 
     public void login(String userNameStr, String passwordStr) {
 

@@ -1,6 +1,5 @@
 package com.saucedemo.runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -15,7 +14,7 @@ import org.junit.runner.RunWith;
         glue = "com/saucedemo/step_definitions",
 //      dryRun = true,
         dryRun = false,
-        tags = "@wip2"
+        tags = "@buy"
 )
 public class CukesRunner {
 }
